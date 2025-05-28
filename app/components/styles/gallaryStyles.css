@@ -1,0 +1,99 @@
+/* Enhanced Gallery Styles */
+.mySwiper2 {
+  height: 400px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mySwiper {
+  height: 100px;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  opacity: 0.7;
+  overflow: hidden;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+  border: 2px solid #ca8a04;
+  transform: scale(0.95);
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-slide:hover .caption-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes expandWidth {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.animate-expand {
+  animation: expandWidth 0.8s ease forwards;
+}
+
+/* For zoom cursor indication */
+.swiper-zoom-container {
+  cursor: zoom-in;
+}
+
+/* Progress bar styling */
+.swiper-pagination-progressbar {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.swiper-pagination-progressbar-fill {
+  background: #ca8a04 !important;
+}
+
+/* Navigation buttons styling */
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  color: white !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(202, 138, 4, 0.8);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 18px !important;
+}
