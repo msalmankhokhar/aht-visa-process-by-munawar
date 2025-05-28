@@ -1,4 +1,4 @@
-import { aht_phone_with_country_code, aht_phone_without_country_code } from "@/constants";
+import { aht_phone_with_country_code, aht_phone_without_country_code, aht_phone_without_country_code_with_spaces } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
@@ -56,7 +56,7 @@ const Footer = () => {
                 <FaPhoneAlt />
                 <div>
                   <h3 className="font-bold text-lg mb-1">Call us</h3>
-                  <p className="text-gray-200 text-sm">0203 504 2344</p>
+                  <p className="text-gray-200 text-sm">{aht_phone_without_country_code_with_spaces}</p>
                 </div>
               </Icon>
             </Link>
