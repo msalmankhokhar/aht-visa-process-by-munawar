@@ -123,6 +123,7 @@ const PopularPackages = () => {
             <Link
               // onClick={() => setShowOptions(!showOptions)}
               // href={`tel:${aht_phone_with_country_code}`}
+              target="_blank"
               href={whatsappChatLink}
               className="bg-primary-color py-2 px-4 flex rounded-lg text-white text-lg
                hover:bg-[#00454A] transition duration-300 ease-in-out transform hover:scale-105"
