@@ -14,7 +14,7 @@ export default function ThankYouPage() {
           Thank you for submitting your information.
         </h1>
         <p className="text-gray-600 text-lg md:text-xl">
-          We’ve received your details and will get back to you shortly. If you have any questions, feel free to reach out to us at <span className="text-blue-400">info@alhabibtravel.co.uk </span> <br /> or call us (0203 504 2344)
+          We’ve received your details and will get back to you shortly. If you have any questions, feel free to reach out to us at <span className="text-blue-400">info@alhabibtravel.co.uk </span> <br /> or call us (0203 773 1080)
         </p>
 
         <Link
