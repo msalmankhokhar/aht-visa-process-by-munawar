@@ -15,7 +15,8 @@ import { LuPackageOpen } from "react-icons/lu";
 // Package data structure with months and categories
 import { packageData } from "../data/popularPackage";
 import { MessageCircle, Phone, PhoneCall } from "lucide-react";
-import { whatsappChatLink } from "@/constants";
+import { aht_phone_with_country_code, whatsappChatLink } from "@/constants";
+import Link from "next/link";
 
 const PopularPackages = () => {
   useEffect(() => {
@@ -119,13 +120,15 @@ const PopularPackages = () => {
           </div>
           {/* ,jkljklk;lk;lk */}
           <div className=" relative flex gap-3 mt-5 justify-center items-center">
-            <button
-              onClick={() => setShowOptions(!showOptions)}
+            <Link
+              // onClick={() => setShowOptions(!showOptions)}
+              // href={`tel:${aht_phone_with_country_code}`}
+              href={whatsappChatLink}
               className="bg-primary-color py-2 px-4 flex rounded-lg text-white text-lg
                hover:bg-[#00454A] transition duration-300 ease-in-out transform hover:scale-105"
             >
               Talk to Agent
-            </button>
+            </Link>
             <button
               onClick={() => {
                 if (!enquiryStatus) handleFormSubmit();

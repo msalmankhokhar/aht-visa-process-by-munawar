@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Check, X } from "lucide-react";
 
 const inclusionData = [
-  
-  
+
+
   {
     title: "Rawdah Permit",
     desc: "To pray in the Rawdah, you will need a Rawdah permit, which we will help you obtain without any delay.",
@@ -70,7 +70,7 @@ const inclusionData = [
 // Data for Exclusions
 const exclusionData = [
 
-   
+
 ];
 
 export default function TravelDetails() {
@@ -96,7 +96,7 @@ export default function TravelDetails() {
      rounded-2xl md:border-none md:shadow-none my-10 shadow-sm mx-1 from-white to-gray-50 py-5 lg:py-16">
       <div
         className="w-full max-w-7xl px-4 mx-auto"
-        
+
       >
         {/* Heading with animation */}
         <motion.div
@@ -106,7 +106,7 @@ export default function TravelDetails() {
           className="text-center mb-12"
         >
           <h1 className="text-3xl md:text-5xl font-bold relative inline-block">
-              Umrah <span className="text-[#D4A10F]">Packages</span>
+            Complimentary <span className="text-[#D4A10F]">Items</span>
             <motion.div
               className="absolute -bottom-2 left-0 right-0 h-1 bg-[#D4A10F]"
               initial={{ width: "0%" }}
@@ -115,8 +115,10 @@ export default function TravelDetails() {
             />
           </h1>
           <p className="text-gray-600 mt-8 max-w-xl  mx-auto">
-            Discover our comprehensive Umrah packages designed for a spiritually
-            fulfilling journey
+            All the essentials you’ll receive as part of your Umrah experience with us.
+          </p>
+          <p className="text-gray-600 mt-5 max-w-xl  mx-auto">
+            All This Comes With Your Booking
           </p>
         </motion.div>
 
@@ -148,11 +150,10 @@ export default function TravelDetails() {
                     onClick={() => toggleInclusion(index)}
                     className={`flex items-center 
                       justify-between p-4 rounded-lg cursor-pointer
-                       transition-all duration-300 ${
-                         activeInclusions[index]
-                           ? "bg-gray-200 text-primary-color border-l-4 border-[#D4A10F]"
-                           : "bg-gray-50 hover:bg-gray-200"
-                       }`}
+                       transition-all duration-300 ${activeInclusions[index]
+                        ? "bg-gray-200 text-primary-color border-l-4 border-[#D4A10F]"
+                        : "bg-gray-50 hover:bg-gray-200"
+                      }`}
                   >
                     <div className="flex items-center">
                       <span className="text-xl mr-3">{item.icon}</span>
@@ -186,7 +187,7 @@ export default function TravelDetails() {
             </div>
           </motion.div>
 
-         
+
         </div>
       </div>
     </div>

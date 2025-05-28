@@ -1,4 +1,6 @@
+import { aht_phone_with_country_code } from "@/constants";
 import Image from "next/image";
+import Link from "next/link";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 // Reusable Icon Component
@@ -27,8 +29,8 @@ const Footer = () => {
               <Image
                 src="/svgfiles/logo.svg"
                 alt="Al Habib Travel Logo"
-                width={90}  
-                height={80} 
+                width={90}
+                height={80}
                 className="ml-2"
               />
               <div>
@@ -49,15 +51,18 @@ const Footer = () => {
           {/* Right Section */}
           <div className="flex flex-col lg:flex-row lg:w-1/2 justify-around">
             {/* Call Us */}
-            <Icon label="Call Us">
-              <FaPhoneAlt />
-              <div>
-                <h3 className="font-bold text-lg mb-1">Call us</h3>
-                <p className="text-gray-200 text-sm">0203 504 2344</p>
-              </div>
-            </Icon>
+            <Link href={`tel:${aht_phone_with_country_code}`}>
+              <Icon label="Call Us">
+                <FaPhoneAlt />
+                <div>
+                  <h3 className="font-bold text-lg mb-1">Call us</h3>
+                  <p className="text-gray-200 text-sm">0203 504 2344</p>
+                </div>
+              </Icon>
+            </Link>
 
             {/* Write to Us */}
+            <Link href={`mailto:info@alhabibtravel.co.uk`}>
             <Icon label="Write to us">
               <FaEnvelope />
               <div>
@@ -67,6 +72,7 @@ const Footer = () => {
                 </p>
               </div>
             </Icon>
+            </Link>
 
             {/* Address */}
             <Icon label="Address">

@@ -3,7 +3,8 @@ import { PhoneCall, Phone, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import EnquiryComponent from "./VisaForm";
 import { BsWhatsapp } from "react-icons/bs";
-import { whatsappChatLink } from "@/constants";
+import { aht_phone_with_country_code, whatsappChatLink } from "@/constants";
+import Link from "next/link";
 
 export default function Navbar() {
   const [showOptions, setShowOptions] = useState(false);
@@ -14,7 +15,7 @@ export default function Navbar() {
   };
 
   const handlePhoneClick = () => {
-    window.location.href = "tel:+923470063865";
+    window.location.href = `tel:${aht_phone_with_country_code}`;
   };
 
   const handleWhatsAppClick = () => {
@@ -31,15 +32,16 @@ export default function Navbar() {
       fixed top-0 bg-white flex-col justify-center w-full  items-center text-center"
       >
         <div className="flex flex-col items-center relative">
-          <div
+          <Link
+            href={`tel:${aht_phone_with_country_code}`}
             className="flex items-center gap-2 cursor-pointer"
-            onClick={() => setShowOptions(!showOptions)}
+          // onClick={() => setShowOptions(!showOptions)}
           >
             <PhoneCall className="w-6 h-6 text-primary-color text-center" />
             <h1 className="text-primary-color text-2xl lg:text-3xl font-bold">
-              {phoneNumber}
+              {aht_phone_with_country_code}
             </h1>
-          </div>
+          </Link>
 
           {showOptions && (
             <div
@@ -62,7 +64,7 @@ export default function Navbar() {
                   text-black hover:text-primary-color"
               >
                 <Phone className="w-4  h-4" />
-               <span className="  lg:font-semibold"> Call Via SIM</span> 
+                <span className="  lg:font-semibold"> Call Via SIM</span>
               </a>
               <a
                 href={`https://wa.me/${phoneNumber.replace(/^0/, "")}`}
@@ -117,7 +119,7 @@ export default function Navbar() {
 
       <div className="hidden  top-0 bg-white    lg:flex w-full  ">
         <div className=" flex px-16 justify-between w-full max-w-7xl   lg:hidded h-20 sticky top-0 z-50 bg-white        mx-auto     items-center    ">
-       
+
 
           <div className="logo  flex flex-col justify-center items-center   ">
             <img
@@ -130,19 +132,19 @@ export default function Navbar() {
             </p>
           </div>
 
-              
-            <button
-              className="bg-[#D4A10F] py-3 items-center flex gap-2 text-white 
+
+          <button
+            className="bg-[#D4A10F] py-3 items-center flex gap-2 text-white 
              px-8 rounded-xl text-xl font-bold animate-pulse "
-            >
-              <span>
-                <PhoneCall />
-              </span>
-              <span className="text-nowrap" onClick={handleFormSubmit}>
-                Connect Now
-              </span>
-            </button>
-           
+          >
+            <span>
+              <PhoneCall />
+            </span>
+            <span className="text-nowrap" onClick={handleFormSubmit}>
+              Connect Now
+            </span>
+          </button>
+
         </div>
       </div>
 
