@@ -1,13 +1,7 @@
-"use client";
 import { CheckCircle } from "lucide-react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function ThankYouPage() {
-  const router = useRouter();
-
-  const handleGoHome = () => {
-    router.push("/");
-  };
 
   return (
     <div className="min-h-screen flex items-center justify-center
@@ -23,12 +17,12 @@ export default function ThankYouPage() {
           We’ve received your details and will get back to you shortly. If you have any questions, feel free to reach out to us at <span className="text-blue-400">info@alhabibtravel.co.uk </span> <br /> or call us (0203 504 2344)
         </p>
 
-        <button
-          onClick={handleGoHome}
+        <Link
+          href={'/'}
           className="mt-6 inline-block bg-[#C49B0D] hover:bg-[#a6830c] text-white text-lg px-6 py-3 rounded-xl transition duration-300 ease-in-out"
         >
           Back to Home
-        </button>
+        </Link>
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -153,7 +152,7 @@ export default function Hero() {
                                 
                                "
             >
-              Get Umrah Quote 
+              Get Umrah Quote
             </button>
             <img src="/svgfiles/leftarrow.svg" alt="" className="  h-10" />
           </div>
@@ -405,11 +404,10 @@ export default function Hero() {
                       aria-label={`Go to slide ${index + 1}`}
                     >
                       <div
-                        className={`h-1 w-8 rounded-full ${
-                          index === currentSlide
+                        className={`h-1 w-8 rounded-full ${index === currentSlide
                             ? "bg-[#D4A10F]"
                             : "bg-white/50"
-                        } transition-all duration-300`}
+                          } transition-all duration-300`}
                       ></div>
                       {index === currentSlide && (
                         <motion.div

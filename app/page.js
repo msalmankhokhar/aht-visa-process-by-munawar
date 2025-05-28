@@ -45,7 +45,7 @@ export default function App() {
       // }
 
       return () => {
-        clearTimeout(initialTimeout);
+        // clearTimeout(initialTimeout);
         // clearTimeout(reappearTimeout);
       };
     }

@@ -214,26 +214,26 @@ const ZiyaratSlider = () => {
         {/* 
         <!-- Make sure you have Tailwind CSS included in your project -->
 <!-- You can use Heroicons or Font Awesome for the icons --> */}
-        <div class="flex md:hidden justify-around w-[90%] mx-auto items-center space-x-4 bg-white shadow-xl rounded-lg px-4 py-3 mt-6">
-          <div class="flex flex-col">
-            <span class="text-primary-color font-bold text-lg">
+        <div className="flex md:hidden justify-around w-[90%] mx-auto items-center space-x-4 bg-white shadow-xl rounded-lg px-4 py-3 mt-6">
+          <div className="flex flex-col">
+            <span className="text-primary-color font-bold text-lg">
               Talk with Agent
             </span>
-            <span class="text-sm text-[#CC9B06] text-center font-medium">
+            <span className="text-sm text-[#CC9B06] text-center font-medium">
               Available 24/7
             </span>
           </div>
-          <div class="flex space-x-4">
+          <div className="flex space-x-4">
             <button
               onClick={handlePhoneClick}
-              class="bg-[#C49B0D] text-white p-2 rounded-tl-md rounded-br-md"
+              className="bg-[#C49B0D] text-white p-2 rounded-tl-md rounded-br-md"
             >
               {/* <!-- Phone Icon --> */}
               <PhoneCall />
             </button>
             <button
               onClick={handleWhatsAppClick}
-              class="bg-[#25D366] text-white p-2 rounded-tr-md rounded-bl-md"
+              className="bg-[#25D366] text-white p-2 rounded-tr-md rounded-bl-md"
             >
               {/* <!-- WhatsApp Icon --> */}
               <BsWhatsapp className="w-6 h-6" />

@@ -97,17 +97,17 @@ export default function Navbar() {
             />
           </div>
 
-          <div class="flex pt-2 space-x-4">
+          <div className="flex pt-2 space-x-4">
             <button
               onClick={handlePhoneClick}
-              class="bg-[#C49B0D] text-white p-2 rounded-tl-md rounded-br-md"
+              className="bg-[#C49B0D] text-white p-2 rounded-tl-md rounded-br-md"
             >
               {/* <!-- Phone Icon --> */}
               <PhoneCall />
             </button>
             <button
               onClick={handleWhatsAppClick}
-              class="bg-[#25D366] text-white p-2 rounded-tr-md rounded-bl-md"
+              className="bg-[#25D366] text-white p-2 rounded-tr-md rounded-bl-md"
             >
               {/* <!-- WhatsApp Icon --> */}
               <BsWhatsapp className="w-6 h-6" />
