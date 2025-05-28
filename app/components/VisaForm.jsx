@@ -90,15 +90,18 @@ const InquiryComponent = ({ closePopup }) => {
       // ✅ Redirect to thank-you page
       router.push("/thankyou");
 
+      setTimeout(() => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'virtualPageview',
+        pagePath: '/thankyou',
+        pageTitle: 'Thank You'
+      });
+    }, 300); // wait for route to settle
+
     } catch (error) {
       console.error("Error sending inquiry:", error);
       setStatusMessage("Your inquiry is not sent...");
-      //  router.push("/thankyou"); // it is just for testing , must remove when you go live
-      // Optionally, you can show a message to the user
-      // localStorage.setItem("inquiryFilled", "true");
-      // setTimeout(() => {
-      //   closePopup(); // Optional: Close even on error
-      // }, 1500);
     } finally {
       setIsSending(false);
     }
