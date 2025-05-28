@@ -1,4 +1,4 @@
-import { aht_phone_with_country_code } from "@/constants";
+import { aht_phone_with_country_code, aht_phone_without_country_code } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
@@ -51,7 +51,7 @@ const Footer = () => {
           {/* Right Section */}
           <div className="flex flex-col lg:flex-row lg:w-1/2 justify-around">
             {/* Call Us */}
-            <Link href={`tel:${aht_phone_with_country_code}`}>
+            <Link href={`tel:${aht_phone_without_country_code}`}>
               <Icon label="Call Us">
                 <FaPhoneAlt />
                 <div>

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, MessageCircle } from "lucide-react";
 import Link from "next/link";
-import { aht_phone_with_country_code } from "@/constants";
+import { aht_phone_with_country_code, aht_phone_without_country_code } from "@/constants";
 // FAQ data with real content
 const accordionData = [
   {
@@ -282,7 +282,7 @@ function Faqs() {
                   transition={{ delay: 0.9, duration: 0.5 }}
                 >
                   <Link
-                    href={`tel:${aht_phone_with_country_code}`}
+                    href={`tel:${aht_phone_without_country_code}`}
                     className="relative bg-[#D69E00] w-full py-4 px-6 rounded-full text-white font-bold text-lg transition-colors duration-300 shadow-lg flex items-center justify-center group"
                   // onClick={() => setShowOptions((prev) => !prev)}
                   >

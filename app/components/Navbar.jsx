@@ -3,7 +3,7 @@ import { PhoneCall, Phone, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import EnquiryComponent from "./VisaForm";
 import { BsWhatsapp } from "react-icons/bs";
-import { aht_phone_with_country_code, whatsappChatLink } from "@/constants";
+import { aht_phone_with_country_code, aht_phone_without_country_code, aht_phone_without_country_code_with_spaces, whatsappChatLink } from "@/constants";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -15,7 +15,7 @@ export default function Navbar() {
   };
 
   const handlePhoneClick = () => {
-    window.location.href = `tel:${aht_phone_with_country_code}`;
+    window.location.href = `tel:${aht_phone_without_country_code}`;
   };
 
   const handleWhatsAppClick = () => {
@@ -39,7 +39,7 @@ export default function Navbar() {
           >
             <PhoneCall className="w-6 h-6 text-primary-color text-center" />
             <h1 className="text-primary-color text-2xl lg:text-3xl font-bold">
-              {aht_phone_with_country_code}
+              {aht_phone_without_country_code_with_spaces}
             </h1>
           </Link>
 
