@@ -1,7 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import FloatingWhatsappBtn from "./components/FloatingWhatsappBtn";
 import { GoogleTagManager } from '@next/third-parties/google'
+import FloatingWhatsAppRedirect from "./components/FloatingWhatsAppRedirect";
+import { whatsappChatLink } from "@/constants";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +27,7 @@ export default function RootLayout({ children }) {
       >
         <GoogleTagManager gtmId="GTM-TXMKX3NK" />
         {children}
-        <FloatingWhatsappBtn />
+        <FloatingWhatsAppRedirect whatsappLink={whatsappChatLink} />
       </body>
     </html>
   );
